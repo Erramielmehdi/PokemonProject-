@@ -1,0 +1,17 @@
+# Pokéchess custom starting line-up (BONUS).
+# Rename this file to "board_config.csv" to use it instead of the default
+# setup. One piece per line:  player;row;col;numPokedex
+#   player -> rouge | vert
+#   row    -> 0..8   (rows 0-2 are rouge's side, 6-8 are vert's side)
+#   col    -> 0..8
+#   num    -> Gen 1 pokedex number (1..151).  150 = Mewtwo (the "king").
+# Lines starting with '#' and blank lines are ignored. Any cell not listed
+# here stays empty, so remember to give EACH player exactly one Mewtwo (150).
+
+# --- A minimal example: just the two kings and a couple of guards ---
+rouge;0;4;150
+rouge;1;3;6
+rouge;1;5;9
+vert;8;4;150
+vert;7;3;6
+vert;7;5;9

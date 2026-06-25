@@ -124,6 +124,15 @@ class Pokemon {
         return degats;
     }
 
+    // Single strike used by Pokéchess: this pokemon hits the defender once.
+    // Reuses the exact same damage formula (with type effectiveness) as the
+    // battle engine, applies the damage to the defender and returns it.
+    public int frappe(Pokemon defenseur) {
+        int degats = calculerDegats(defenseur);
+        defenseur.pvActuels = Math.max(0, defenseur.pvActuels - degats);
+        return degats;
+    }
+
     // One round of combat: fastest attacks first, then the other counter-attacks if still alive
     public void attaque(Pokemon adverse) {
         Pokemon premier = (this.vit >= adverse.vit) ? this : adverse;
